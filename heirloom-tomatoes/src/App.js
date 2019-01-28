@@ -15,6 +15,8 @@ import AboutUs from './pages/AboutUs'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Tomato from './pages/Tomato'
+import Skills from './pages/Skills'
+import Projects from './pages/Projects'
 
 class App extends Component {
   render() {
@@ -32,13 +34,21 @@ class App extends Component {
               <li>
                 <Link to="/tomato/">Tomato</Link>
               </li>
+              <li>
+                <Link to="/skills/">Skills</Link>
+              </li>
+              <li>
+                <Link to="/projects/">Projects</Link>
+              </li>
             </ul>
           </nav>
 
           <Switch>
+            <Route path="/" exact component={Home} />
             <Route path="/about/" component={AboutUs} />
             <Route path="/tomato/" component={Tomato} />
-            <Route path="/" exact component={Home} />
+            <Route path="/skills/" component={Skills} />
+            <Route path="/projects/" component={Projects} />
             <Route component={NotFound} />
           </Switch>
         </div>
